@@ -4,7 +4,7 @@ install:
 publish:
 	npm publish --dry-run
 
-brain-games:
+gendiff:
 	node bin/gendiff.js
 
 lint:
