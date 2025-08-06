@@ -2,6 +2,7 @@
 
 import { program } from 'commander'
 import genDiff from '../src/index.js'
+import validateFilePath from '../src/utils/validateFilePath.js'
 
 program
   .name('gendiff')
@@ -14,7 +15,10 @@ program
   .argument('<filepath1>')
   .argument('<filepath2>')
   .action((filepath1, filepath2, options) => {
-    genDiff(filepath1, filepath2, options.format)
+    const validFilepath1 = validateFilePath(filepath1)
+    const validFilepath2 = validateFilePath(filepath2)
+
+    genDiff(validFilepath1, validFilepath2, options.format)
   })
 
 program.parse()
