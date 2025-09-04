@@ -1,1 +1,8 @@
 [![Actions Status](https://github.com/nordwaldberg/backend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/nordwaldberg/backend-project-46/actions)
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=nordwaldberg_backend-project-46&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=nordwaldberg_backend-project-46)<br/>
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nordwaldberg_backend-project-46&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=nordwaldberg_backend-project-46)<br/>
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nordwaldberg_backend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=nordwaldberg_backend-project-46)<br/>
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=nordwaldberg_backend-project-46&metric=bugs)](https://sonarcloud.io/summary/new_code?id=nordwaldberg_backend-project-46)<br/>
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=nordwaldberg_backend-project-46&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=nordwaldberg_backend-project-46)<br/>
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=nordwaldberg_backend-project-46&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=nordwaldberg_backend-project-46)<br/>
