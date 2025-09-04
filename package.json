@@ -25,10 +25,10 @@
   "homepage": "https://github.com/nordwaldberg/backend-project-46#readme",
   "devDependencies": {
     "@eslint/create-config": "^1.9.0",
-    "@eslint/js": "^9.29.0",
+    "@eslint/js": "^9.34.0",
     "@stylistic/eslint-plugin": "^5.0.0",
-    "eslint": "^9.29.0",
-    "globals": "^16.2.0"
+    "eslint": "^9.34.0",
+    "globals": "^16.3.0"
   },
   "dependencies": {
     "commander": "^14.0.0",
