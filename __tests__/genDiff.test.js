@@ -1,4 +1,4 @@
-import { expect, test } from '@jest/globals'
+import { describe, expect, test } from '@jest/globals'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { readFileSync } from 'node:fs'
@@ -11,17 +11,50 @@ const getFixturePath = filename => path.join(__dirname, '..', '__fixtures__', fi
 const readFixtureFile = filename => readFileSync(getFixturePath(filename), 'utf-8')
 
 const stylish = readFixtureFile('stylish-result.txt')
+const plain = readFixtureFile('plain-result.txt')
 
-test('Should compare JSON files with stylish option', () => {
-  const file1 = getFixturePath('file1.json').trim()
-  const file2 = getFixturePath('file2.json').trim()
+describe('Should work with JSON files', () => {
+  test('Should compare without style option', () => {
+    const file1 = getFixturePath('file1.json').trim()
+    const file2 = getFixturePath('file2.json').trim()
 
-  expect(genDiff(file1, file2)).toEqual(stylish)
+    expect(genDiff(file1, file2)).toEqual(stylish)
+  })
+
+  test('Should compare with \'stylish\' style option', () => {
+    const file1 = getFixturePath('file1.json').trim()
+    const file2 = getFixturePath('file2.json').trim()
+
+    expect(genDiff(file1, file2, 'stylish')).toEqual(stylish)
+  })
+
+  test('Should compare with \'plain\' style option', () => {
+    const file1 = getFixturePath('file1.json').trim()
+    const file2 = getFixturePath('file2.json').trim()
+
+    expect(genDiff(file1, file2, 'plain')).toEqual(plain)
+  })
 })
 
-test('Should compare YAML files (with different file ext) with stylish option', () => {
-  const file1 = getFixturePath('file1.yaml').trim()
-  const file2 = getFixturePath('file2.yml').trim()
+describe('Should work with YAML files (+ with \'different\' file extensions)', () => {
+  test('Should compare without style option', () => {
+    const file1 = getFixturePath('file1.yaml').trim()
+    const file2 = getFixturePath('file2.yml').trim()
 
-  expect(genDiff(file1, file2)).toEqual(stylish)
+    expect(genDiff(file1, file2)).toEqual(stylish)
+  })
+
+  test('Should compare with \'stylish\' style option', () => {
+    const file1 = getFixturePath('file1.yaml').trim()
+    const file2 = getFixturePath('file2.yml').trim()
+
+    expect(genDiff(file1, file2, 'stylish')).toEqual(stylish)
+  })
+
+  test('Should compare with \'plain\' style option', () => {
+    const file1 = getFixturePath('file1.yaml').trim()
+    const file2 = getFixturePath('file2.yml').trim()
+    console.log(plain)
+    expect(genDiff(file1, file2, 'plain')).toEqual(plain)
+  })
 })
