@@ -18,3 +18,10 @@ test('Should compare JSON files with stylish option', () => {
 
   expect(genDiff(file1, file2)).toEqual(stylish)
 })
+
+test('Should compare YAML files (with different file ext) with stylish option', () => {
+  const file1 = getFixturePath('file1.yaml').trim()
+  const file2 = getFixturePath('file2.yml').trim()
+
+  expect(genDiff(file1, file2)).toEqual(stylish)
+})

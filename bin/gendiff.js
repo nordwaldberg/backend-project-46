@@ -18,7 +18,7 @@ program
     const validFilepath1 = validateFilePath(filepath1)
     const validFilepath2 = validateFilePath(filepath2)
 
-    genDiff(validFilepath1, validFilepath2, options.format)
+    console.log(genDiff(validFilepath1, validFilepath2, options.format))
   })
 
 program.parse()
