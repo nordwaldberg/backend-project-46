@@ -24,8 +24,9 @@ describe('Should work with JSON files', () => {
   test('Should compare with \'stylish\' style option', () => {
     const file1 = getFixturePath('file1.json').trim()
     const file2 = getFixturePath('file2.json').trim()
-
-    expect(genDiff(file1, file2, 'stylish')).toEqual(stylish)
+    const result = genDiff(file1, file2, 'stylish')
+    console.log(result)
+    expect(result).toEqual(stylish)
   })
 
   test('Should compare with \'plain\' style option', () => {
