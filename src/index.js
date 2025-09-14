@@ -1,6 +1,6 @@
 import { parse } from './parser/index.js'
 import getDiff from './getDiff.js'
-import { getPlainFormat, getStylishFormat } from './formatter/index.js'
+import { getJSONFormat, getPlainFormat, getStylishFormat } from './formatter/index.js'
 
 const genDiff = (filepath1, filepath2, style = 'stylish') => {
   const file1 = parse(filepath1)
@@ -13,6 +13,8 @@ const genDiff = (filepath1, filepath2, style = 'stylish') => {
       return getStylishFormat(diff)
     case 'plain':
       return getPlainFormat(diff)
+    case 'json':
+      return getJSONFormat(diff)
   }
 }
 

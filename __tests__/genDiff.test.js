@@ -12,6 +12,7 @@ const readFixtureFile = filename => readFileSync(getFixturePath(filename), 'utf-
 
 const stylish = readFixtureFile('stylish-result.txt')
 const plain = readFixtureFile('plain-result.txt')
+const json = readFixtureFile('json-result.txt')
 
 describe('Should work with JSON files', () => {
   test('Should compare without style option', () => {
@@ -35,6 +36,13 @@ describe('Should work with JSON files', () => {
 
     expect(genDiff(file1, file2, 'plain')).toEqual(plain)
   })
+
+  test('Should compare with \'json\' style option', () => {
+    const file1 = getFixturePath('file1.json').trim()
+    const file2 = getFixturePath('file2.json').trim()
+
+    expect(genDiff(file1, file2, 'json')).toEqual(json)
+  })
 })
 
 describe('Should work with YAML files (+ with \'different\' file extensions)', () => {
@@ -57,5 +65,12 @@ describe('Should work with YAML files (+ with \'different\' file extensions)', (
     const file2 = getFixturePath('file2.yml').trim()
     console.log(plain)
     expect(genDiff(file1, file2, 'plain')).toEqual(plain)
+  })
+
+  test('Should compare with \'json\' style option', () => {
+    const file1 = getFixturePath('file1.yaml').trim()
+    const file2 = getFixturePath('file2.yml').trim()
+    console.log(plain)
+    expect(genDiff(file1, file2, 'json')).toEqual(json)
   })
 })
