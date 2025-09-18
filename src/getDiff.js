@@ -1,7 +1,7 @@
 import _ from 'lodash'
 
 const getDiff = (objA, objB) => {
-  const allKeys = [...new Set([...Object.keys(objA), ...Object.keys(objB)])].sort()
+  const allKeys = [...new Set([...Object.keys(objA), ...Object.keys(objB)])].sort((a, b) => a.localeCompare(b))
 
   return allKeys.map((key) => {
     switch (true) {
