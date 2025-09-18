@@ -44,12 +44,9 @@ ___
 > -f, --format <type>  output format </br>
 > -h, --help           display help for command </br>
 
-<div style="text-align: center">
-    <img 
-        src="assets/gendiff.gif"
-        width="600" 
-        height="215" 
-        alt="demo_gendiff"
-    >
-</div>
-___
+<img 
+    src="assets/gendiff.gif"
+    width="840" 
+    height="280" 
+    alt="demo_gendiff">
+
